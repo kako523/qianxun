@@ -1,0 +1,10 @@
+<view class="chart1">
+  <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}" class="mychart-dom-multi-bar"
+  ></ec-canvas>
+</view> 
+
+<view class="chart2">
+  <ec-canvas id="mychart-dom-multi-scatter" canvas-id="mychart-multi-scatter" ec="{{ ecScatter }}" class="mychart-dom-multi-scatter"
+  ></ec-canvas>
+</view>
+

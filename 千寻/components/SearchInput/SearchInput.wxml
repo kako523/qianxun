@@ -1,0 +1,6 @@
+<view class="search_input">
+    <input class="search_text" placeholder="请输入您要搜索的物品" bindinput="SearchInput"></input>
+    <view class="icon_holder">
+    <image class="search_icon" src="../../icons/搜索.png" mode="widthFix" bindtap="handleSearch"></image>
+    </view>
+</view>

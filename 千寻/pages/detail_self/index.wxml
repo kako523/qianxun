@@ -1,0 +1,26 @@
+<view class="user">
+<image class="user_img" src="https://s3.ax1x.com/2021/02/08/yUgEpd.jpg" mode="widthFix"></image>
+<view class="user_name">用户名称</view>
+<!-- <navigator class="talk" url="/pages/message/index">编辑</navigator> -->
+</view>
+
+<view class="notice">
+    <view class="user-point">
+        <image src="https://s3.ax1x.com/2021/02/18/yWAnyD.png" mode="widthFix" class="point-icon"/>
+        <view class="point-num">50</view>
+    </view>
+    <view class="notice_detail">
+    <text class="info">物品详情，很大一段,我随便输入一大段试一试样式，看看能不能自动换行啥的</text>
+    <view class="info_img_item"
+        wx:for="{{chooseImgs}}"
+        wx:key="*this"
+        data-index="{{index}}"
+        >
+        <image src="{{item}}" class="each_img" mode="widthFix"/></view>
+    </view>
+</view>
+
+<view class="tool">
+<view class="look">浏览：10人</view>
+</view>
+

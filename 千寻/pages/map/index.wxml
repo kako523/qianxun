@@ -1,0 +1,21 @@
+<map id="mapId"
+style='height:100vh;width:100vh' longitude="{{longitude}}" latitude="{{latitude}}" 
+scale="18"  enable-rotate="{{true}}" 
+enable-scroll="{{true}}" enable-zoom="{{true}}" 
+markers="{{markers}}" bindmarkertap="bindmarkertap">
+<cover-view class="map-button" scroll-top="0">
+    <cover-view class="user-point">
+        <cover-image src="/icons/points.png" mode="widthFix" class="point-icon"/>
+        <cover-view class="point-num">{{score}}</cover-view>
+    </cover-view>
+    <navigator class="ranking" url="/pages/ranking/index">
+        <cover-image class="ranking-icon" src="/icons/ranking.png" mode="widthFix"/>
+    </navigator>
+    <navigator class="mission" url="/pages/my_mission/index">
+        <cover-image class="mission-icon" src="/icons/mission.png" mode="widthFix" />
+    </navigator>
+      
+</cover-view>
+
+
+</map>

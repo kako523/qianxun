@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.UserDao">
+
+    <insert id="insertUser" parameterType="User" >
+        insert into user(openID, nickname, avatarUrl, score, sessionkey)
+         VALUES (#{openID},#{nickname},#{score},#{sessionkey})
+    </insert>
+
+    <select id="selectUser" resultType="com.example.demo.enity.User">
+        select avatarUrl, nickname, score from user order by score
+    </select>
+
+    <delete id="delete" parameterType="int">
+        delete from user where openID=#{id}
+    </delete>
+
+    <update id="update" parameterType="int">
+        update user set score=score+#{get} where openID=#{id}
+    </update>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.User_messageDao">
+
+    <insert id="insertmessage" parameterType="User_message">
+        insert into message(message_id, message_receiveid, message_time, message_content)
+        VALUES (NULL, #{message_receiveid}, #{message_time}, #{message_content})
+    </insert>
+
+    <select id="selectuser" parameterType="String" resultType="com.example.demo.enity.User_message">
+        select * from message where message_receiveid=#{openid}
+    </select>
+</mapper>

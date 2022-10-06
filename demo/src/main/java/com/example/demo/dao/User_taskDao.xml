@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.User_taskDao">
+
+    <insert id="inserttask" parameterType="User_task" >
+        insert into user_task(task_id, task_acceptId, task_noticeId, task_noticetitle,
+                              task_noticecontent, task_noticeimage, task_score, task_state)
+        VALUES (NULL,#{task_acceptId}, #{task_noticeId}, #{task_noticetitle}, #{task_noticecontent},
+                #{task_noticeimage,}, #{task_score}, #{task_state})
+    </insert>
+
+    <select id="selecttask" parameterType="String" resultType="com.example.demo.enity.User_task">
+        select * from test.user_task where task_acceptId=#{user_id} order by task_state
+    </select>
+
+    <select id="select" parameterType="Integer" resultType="String">
+        select task_acceptId from test.user_task where task_noticeId=#{notice_id}
+    </select>
+
+    <select id="find" parameterType="Integer" resultType="com.example.demo.enity.User_task">
+        select * from test.user_task where task_id=#{task_id}
+    </select>
+
+    <update id="updatetask" >
+        update test.user_task set task_state=1 where task_id=#{task_id}
+    </update>
+
+    <delete id="delete" parameterType="Integer">
+        delete from user_task where task_id=#{task_id}
+    </delete>
+
+    <select id="selectnotice" parameterType="Integer" resultType="Integer">
+        select task_noticeId from test.user_task where task_id=#{task_id}
+    </select>
+
+    <select id="selectid" parameterType="Integer" resultType="String">
+        select task_acceptId from test.user_task where task_id=#{task_id}
+    </select>
+</mapper>

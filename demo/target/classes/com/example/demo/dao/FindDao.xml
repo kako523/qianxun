@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.FindDao">
+    <!--<resultMap id="BaseResultMap" type="com.example.demo.enity.Find" >
+        <constructor>
+            <idArg column="findID" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="category" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="time" jdbcType="DATE" javaType="java.lang.String" />
+            <arg column="userID" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="title" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="content" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="score" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="imageID" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="finish" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="click" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="ad_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="address" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="latitude" jdbcType="DOUBLE" javaType="java.lang.Double" />          &lt;!&ndash;这边的问题是1. 不知道是不是全都要写 2. 不知道double怎么写&ndash;&gt;
+            <arg column="longitude" jdbcType="DOUBLE" javaType="java.lang.Double" />
+            <arg column="status" jdbcType="INTEGER" javaType="java.lang.Integer" />
+        </constructor>
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        findID, category, time, userID, title, content, score, imageID,finish, click, ad_name
+        , address, latitude, longitude, status
+    </sql>-->
+
+    <select id="getFindList" resultType="com.example.demo.enity.Find">
+        select *
+<!--        <include refid="Base_Column_List"></include>-->
+        from test.find
+        order by finish
+    </select>
+
+    <select id="getFindListBySelect" resultType="com.example.demo.enity.Find">
+        select *
+        from test.find
+        where title like CONCAT('%',#{title},'%')
+        <if test="category != 0">
+            and category = #{category}
+        </if>
+        and status = #{status}
+        and address like CONCAT('%',#{address},'%')
+        order by finish
+
+
+    </select>
+
+    <select id="getFindListByClick" resultType="com.example.demo.enity.Find">
+        select *
+<!--        <include refid="Base_Column_List"></include>-->
+        from test.find
+        where status = 0
+        order by click desc
+    </select>
+
+    <select id="getFindListByTime" resultType="com.example.demo.enity.Find">
+        select *
+<!--        <include refid="Base_Column_List"></include>-->
+        from test.find
+        where status = 0
+        order by time desc
+    </select>
+
+    <insert id="add" parameterType="com.example.demo.enity.Find">
+        insert into test.find(findID, category, time, userID, title, content, score,
+                              finish, click, ad_name, address, latitude, longitude, status, image1,
+                              image2, image3)
+        values (null, #{category},#{time}, #{userID},
+                #{title}, #{content}, #{score},
+                    #{finish},
+                    #{click}, #{ad_name}, #{address},
+                    #{latitude}, #{longitude}, #{status}, #{image1}, #{image2},
+                    #{image3})
+    </insert>
+
+    <delete id="deleteById" parameterType="java.lang.Integer" >
+        delete from test.find where findID = #{findID}
+    </delete>
+
+    <select id="selectByID" resultType="com.example.demo.enity.Find" parameterType="java.lang.Integer" >
+        select *
+        from test.find
+        where findID = #{findID}
+    </select>
+
+
+    <!--<insert id="insert" parameterType="com.example.demo.enity.Find" >
+        insert into test.find(findID, category, time, userID, title, content, score,
+                              imageID, finish, click, ad_name
+                                ,address, latitude, longitude, status)
+        values (#{findID}, #{category}, #{time}, #{userID},
+                #{title}, #{content}, #{score}
+                #{imageID}, #{finish}
+                #{click}, #{ad_name,}, #{address}
+                #{latitude}, #{longitude}, #{status})
+    </insert>-->
+
+
+    <update id="updateFinish" parameterType="INTEGER" >
+        update test.find
+        set  finish = 1
+        where findID = #{findID}
+    </update>
+
+    <update id="updateClick" parameterType="INTEGER" >
+        update test.find
+        set click = #{click}
+        where findID = #{findID}
+    </update>
+
+
+    <select id="getFindListByUser" parameterType="java.lang.String" resultType="com.example.demo.enity.Find">
+        select * from test.find
+        where userID = #{userID}
+        order by finish, time
+    </select>
+
+    <select id="findtitle" parameterType="Integer" resultType="String">
+        select title from test.find where findID=#{findID}
+    </select>
+
+    <select id="finduser" parameterType="Integer" resultType="String">
+        select userID from test.find where findID=#{findID}
+    </select>
+
+
+    <select id="getTotalByCategory" parameterType="java.lang.String" resultType="com.example.demo.enity.Find">
+    select * from test.find
+    where category = #{category}
+    </select>
+<!--    <insert id="addImage" parameterType="map">
+        insert into test.image(id, findID, URL) VALUES (null, #{findID}, #{url} )
+    </insert>-->
+
+    <select id="getNumberOfArea" parameterType="java.lang.String" resultType="com.example.demo.enity.Find">
+        select * from test.find
+        where address like CONCAT('%',#{address},'%')
+    </select>
+
+
+    <select id="getNumberOfCategory" parameterType="java.lang.Integer" resultType="com.example.demo.enity.Find">
+        select * from test.find
+        where category = #{category}
+    </select>
+
+    <select id="getHead" parameterType="java.lang.String" resultType="java.lang.String">
+        select avatarUrl from test.user
+        where openID = #{userID}
+    </select>
+
+
+    <select id="getNickname" parameterType="java.lang.String" resultType="java.lang.String">
+        select nickName from test.user
+        where openID = #{userID}
+    </select>
+
+    <!--选择插入 可以后期再考虑-->
+    <!--<insert id="insertSelective" parameterType="com.Find" >
+        insert into small_cart
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="userId != null" >
+                user_id,
+            </if>
+            <if test="productId != null" >
+                product_id,
+            </if>
+            <if test="quantity != null" >
+                quantity,
+            </if>
+            <if test="checked != null" >
+                checked,
+            </if>
+            <if test="createTime != null" >
+                create_time,
+            </if>
+            <if test="updateTime != null" >
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null" >
+                #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="productId != null" >
+                #{productId,jdbcType=INTEGER},
+            </if>
+            <if test="quantity != null" >
+                #{quantity,jdbcType=INTEGER},
+            </if>
+            <if test="checked != null" >
+                #{checked,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null" >
+                now(),
+            </if>
+            <if test="updateTime != null" >
+                now(),
+            </if>
+        </trim>
+    </insert>-->
+
+
+    <!--
+    insert into qianxun.find(findID, category, time, userID, title, content, score, imageID, accepting, finish, click, ad_name
+            address, latitude, longitude, status)
+        values (#{findID,jdbcType=INTEGER}, #{category,jdbcType=INTEGER}, now(), #{userID,jdbcType=INTEGER},
+                #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{score,jdbcType=INTEGER}
+                #{imageID,jdbcType=VARCHAR}, #{accepting,jdbcType=INTEGER}, #{finish,jdbcType=INTEGER}
+                #{click,jdbcType=INTEGER}, #{ad_name,jdbcType=VARCHAR}, #{adress,jdbcType=VARCHAR}
+                #{latitude,jdbcType=DOUBLE}, #{longitude,jdbcType=double}, #{status,jdbcType=INTEGER})-->
+
+
+
+
+
+
+
+</mapper>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "SearchInput":"../../components/SearchInput/SearchInput",
+    "select_city":"../../components/select_city/select_city",
+    "select_kind":"../../components/select_kind/select_kind",
+    "select_notice":"../../components/select_notice/select_notice"
+  },
+  "navigationBarTitleText": "所有启事"
+}

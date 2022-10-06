@@ -1,0 +1,70 @@
+<form  bindsubmit="formSubmit" bindreset="formReset">
+    <view class="pub_select">
+    <view class="kind">
+        <view class="kind_text">启事类型</view>
+        <block wx:for="{{notice}}" wx:key="id">
+            <text class='kind_btn {{item.checked?"checked_notice":""}}' data-id='{{item.id}}' bindtap='parameterTap1'>{{item.name}}</text>
+        </block>
+    </view>
+
+    <view class="{{showView?'point':'point_hide'}}">
+        <view class="point_text">积分</view>
+        <block wx:for="{{points}}" wx:key="id">
+            <text class='point_btn {{item.checked?"checked_point":""}}' data-id='{{item.id}}' bindtap='parameterTap2'>{{item.name}}</text>
+        </block>
+    </view>
+
+    <view class="goods_kind">
+        <view class="goods_kind_text">物品类型</view>
+        <view class="all">
+        <block wx:for="{{goods}}" wx:key="id">
+            <view class="firstline" wx:if="{{index<4}}">
+            <text class='goods_kind_btn {{item.checked?"checked_goods":""}}' data-id='{{item.id}}' bindtap='parameterTap3'>{{item.name}}</text>
+            </view>
+
+            <view class="nextline" wx:if="{{index>3}}">
+            <text class='goods_kind_btn_next {{item.checked?"checked_goods_next":""}}' data-id='{{item.id}}' bindtap='parameterTap3'>{{item.name}}</text>
+            </view>
+        </block>
+        </view>
+    </view>
+
+    <view class="position" bindtap="handleChooseAddress">
+        <view class="pos_text">位置</view>
+        <view class="ad_detail">{{ad_name}}</view>
+        <image class="right" mode="widthFix" src="/icons/right.png"></image>
+    </view>
+
+    <view class="info">
+        <view class="tittleItem">
+        <input value="{{tittle}}" placeholder="标题" maxlength="30" bindinput="tittleInput"/>
+        </view>
+
+        <view class="contentItem">
+        <textarea value="{{content}}" placeholder="请输入物品的具体信息及您的联系方式（若您发布招领启事，请注意隐藏物品的关键信息）" bindinput="contentInput"></textarea>
+        </view>
+
+        <view class="tool">
+        <button bindtap="handleChooseImg">+</button>
+        <view class="up_img_item"
+        wx:for="{{chooseImgs}}"
+        wx:key="*this"
+        bindtap="handleRemoveImg"
+        data-index="{{index}}"
+        >
+        <UpImg src="{{item}}"></UpImg></view>
+        
+        </view>
+    </view>
+
+   <view class="btn-area">
+   <button bindtap="handleFormSubmit">
+   <icon type="success_no_circle" size="23" color="black">
+   </icon>
+   提交
+   </button>
+   </view>
+
+    </view>
+
+</form>

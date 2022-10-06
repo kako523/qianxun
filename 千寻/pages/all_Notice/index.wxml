@@ -1,0 +1,38 @@
+<view class="complex">
+    <view class="search_input">
+    <input class="search_text" placeholder="请输入您要搜索的物品" bindinput="SearchInput"></input>
+    <view class="icon_holder" bindtap="handleSearch">
+    <image class="search_icon" src="/icons/search.png" mode="widthFix"></image>
+    </view>
+</view>
+</view>
+<!-- 下拉框 -->
+<view class="my_select"> 
+  <select_notice prop-array='{{options_notice}}' bind:myget='get_noticeData'></select_notice>
+  <select_kind prop-array='{{options_kind}}' bind:myget='get_kindData'></select_kind>
+  <select_city prop-array='{{options_city}}' bind:myget='get_adData'></select_city>
+</view>
+
+<!-- 启事展示区 -->
+<view class="notice_tab">
+          <navigator class="goods_item" 
+          wx:for="{{notices}}" 
+          wx:key="{{item.findID}}"
+          wx:if="{{item.finish===0}}"
+          url="/pages/detail/index?id={{item.findID}}">
+              <view class="goods_img_wrap">
+                  <image src="{{item.image1?item.image1:'https://z3.ax1x.com/2021/03/21/65z6AK.png'}}"></image>
+              </view>
+
+              <!-- 下边物品容器 -->
+              <view class="goods_info_wrap">
+                  <text class="goods_name">{{item.title}}\n{{item.content}}</text>
+                  <view class="goods_price" wx:if="{{item.status===0}}">{{item.score}}积分</view>
+              </view>
+          </navigator>
+      </view>
+
+<button class="upload" bindtap="publishtap">
+        <view class="publish">+ 发布</view>
+</button>
+  

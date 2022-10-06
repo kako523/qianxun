@@ -1,0 +1,27 @@
+<view class='list-top'>
+   总 排 行
+</view>
+  <block>
+    <view class="person-info"
+    wx:for="{{rankList}}"
+    wx:key="*this"
+    >
+        <view class="{{index===0?'person_rank':'person_rank1'}}">
+            <view class="ranking_num">
+                {{index+1}}
+            </view>
+            <image mode="widthFix" src="https://s3.ax1x.com/2021/02/17/y2rJNd.png" class="firstone" wx:if="{{index===0}}"> </image>
+        </view>
+        <view class="person_img_wrap">
+                  <image src="{{item.avatarUrl?item.avatarUrl:'https://s3.ax1x.com/2021/02/08/yUgEpd.jpg'}}"></image>
+        </view>
+        <view class="person_name">{{item.nickName}}</view>
+        <view class="person_points">{{item.score}}积分</view>
+    </view>
+    
+    <button class="sharebtn" open-type="share">
+          <image  class="shareimage" src="/icons/share.png"></image>
+          炫耀名次
+    </button>
+  </block>
+  

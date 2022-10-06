@@ -1,0 +1,114 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "所有启事",
+          "pathName": "pages/all_Notice/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的任务",
+          "pathName": "pages/my_mission/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我发布的",
+          "pathName": "pages/published/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "排行榜",
+          "pathName": "pages/ranking/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的周围",
+          "pathName": "pages/map/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布页面",
+          "pathName": "pages/publishing/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "物品详情",
+          "pathName": "pages/detail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索",
+          "pathName": "pages/search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的消息",
+          "pathName": "pages/message_list/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "聊天页面",
+          "pathName": "pages/message/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "授权登录",
+          "pathName": "pages/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "设置",
+          "pathName": "pages/setting/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "地区统计",
+          "pathName": "pages/area_statistics/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "带参详情",
+          "pathName": "pages/detail/index",
+          "query": "id=156489",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

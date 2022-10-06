@@ -1,0 +1,58 @@
+page {
+  background-color: white;
+}
+.user {
+  display: flex;
+  flex-direction: row;
+  padding: 30rpx;
+  border-bottom: solid hsl(0, 13%, 89%);
+  border-bottom-width: 1rpx;
+}
+.user .user_img {
+  width: 15%;
+  border-radius: 15rpx;
+}
+.user .user_name {
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  margin-right: 280rpx;
+}
+.notice {
+  display: flex;
+  flex-direction: column;
+}
+.notice .user-point {
+  display: flex;
+  flex-direction: row;
+  padding: 30rpx;
+}
+.notice .user-point .point-icon {
+  width: 7%;
+}
+.notice .user-point .point-num {
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-top: 3rpx;
+}
+.notice .notice_detail {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.notice .notice_detail .info {
+  margin-bottom: 10rpx;
+}
+.notice .notice_detail .info_img_item .each_img {
+  width: 100%;
+  border-radius: 30rpx;
+}
+.tool {
+  margin-top: 20rpx;
+}
+.tool .look {
+  display: flex;
+  color: hsl(0, 1%, 65%);
+  justify-content: flex-end;
+  margin-right: 20rpx;
+}

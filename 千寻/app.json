@@ -1,0 +1,73 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/all_Notice/index",
+    "pages/map/index", 
+    "pages/message/index",
+    "pages/message_list/index",
+    "pages/login/index", 
+    "pages/user/index",
+    "pages/auth/index",
+    "pages/published/index",
+    "pages/my_mission/index",
+    "pages/ranking/index",
+    "pages/detail/index",
+    "pages/publishing/index",
+    "pages/detail_self/index",
+    "pages/setting/index",
+    "pages/detail_zhaoling/index",
+    "pages/area_statistics/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F4A460",
+    "navigationBarTitleText": "千寻",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "",
+    "selectedColor": "#F4A460",
+    "backgroundColor": "",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/首页.png",
+        "selectedIconPath": "icons/首页 (1).png"
+      },
+      {
+        "pagePath": "pages/all_Notice/index",
+        "text": "所有启事",
+        "iconPath": "icons/物品申请.png",
+        "selectedIconPath": "icons/物品申请 (1).png"
+      },
+      {
+        "pagePath": "pages/map/index",
+        "text": "我的周围",
+        "iconPath": "icons/地图定位.png",
+        "selectedIconPath": "icons/地图定位 (1).png"
+      },
+      {
+        "pagePath": "pages/message_list/index",
+        "text": "我的消息",
+        "iconPath": "icons/消息.png",
+        "selectedIconPath": "icons/消息 (1).png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "个人中心",
+        "iconPath": "icons/个人中心.png",
+        "selectedIconPath": "icons/个人中心 (1).png"
+      }
+    ]
+  },
+  
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序中物品位置显示"
+    }
+  }
+}

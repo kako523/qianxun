@@ -1,0 +1,10 @@
+<view class="setting_box">
+<button class="user_info" bindtap="getUserInfo">
+    用户信息授权
+    <image class="right" mode="widthFix" src="/icons/right.png"></image>
+</button>
+<button class="location" bindtap="getlocation">
+地理位置授权
+ <image class="right" mode="widthFix" src="/icons/right.png"></image>
+</button>
+</view>

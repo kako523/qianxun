@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "index-minitab":"../../components/index-minitab/index-minitab"
+  },
+  "navigationBarTitleText": "我发布的",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

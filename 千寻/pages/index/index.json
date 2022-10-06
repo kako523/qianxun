@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SearchInput":"../../components/SearchInput/SearchInput",
+    "index-minitab":"../../components/index-minitab/index-minitab"
+  },
+  "navigationBarTitleText": "千寻"
+}

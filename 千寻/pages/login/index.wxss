@@ -1,0 +1,51 @@
+page {
+  background-color: white;
+}
+.headView {
+  margin: 90rpx 50rpx 90rpx 50rpx;
+}
+.headView .headImageView {
+  display: block;
+  margin-left: 50rpx;
+  margin-top: 50rpx;
+  margin-right: 50rpx;
+  margin-bottom: 0rpx;
+  height: 100rpx;
+}
+.headView .headImageView .headImage {
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  width: 150rpx;
+  height: 150rpx;
+}
+.headView .titleText {
+  margin-left: 50rpx;
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  color: #020e0f;
+  text-align: center;
+}
+.headView .contentText {
+  margin-left: 50rpx;
+  margin-top: 0rpx;
+  margin-bottom: 0rpx;
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+}
+.headView .authBtn {
+  margin-top: 70rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  height: 90rpx;
+  font-size: 32rpx;
+}
+.headView .authBtn_de {
+  margin-top: 30rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  height: 90rpx;
+  font-size: 32rpx;
+}

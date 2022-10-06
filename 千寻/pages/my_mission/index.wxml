@@ -1,0 +1,25 @@
+ <view class="first_tab">
+          <view class="{{item.task_state?'goods_item_hide':'goods_item'}}"
+          wx:for="{{missionList}}" 
+          wx:key="{{item.task_id}}">
+              <navigator class="goods_img_wrap" url="/pages/detail/index?id={{item.task_noticeId}}">
+                  <image src="{{item.task_noticeimage?item.task_noticeimage:'https://z3.ax1x.com/2021/03/21/65z6AK.png'}}"></image>
+              </navigator>
+
+              <view class="goods_info_wrap">
+                  <navigator class="goods_name" url="/pages/detail/index?id={{item.task_noticeId}}">
+                  <text class="goods_name_c">{{item.task_noticetitle}}
+                  {{item.task_noticecontent}}
+                  </text>
+                  </navigator>
+                  <navigator class="goods_price" url="/pages/detail/index?id={{item.task_noticeId}}">{{item.task_score}}积分</navigator>
+                  <view class="buttons">
+                      <button class="btn1" bindtap="showRule" style="width:200rpx" 
+                      disabled="{{disabled}}" data-id="{{item.task_id}}">我已找到</button>
+                      <button class="btn2" bindtap="handleItemRemove" style="width:200rpx" 
+                      disabled="{{disabled}}" data-id="{{item.task_id}}">取消任务</button>
+                  </view>
+              </view>
+          </view>
+        
+      </view>

@@ -1,0 +1,88 @@
+.list-top {
+  height: 106rpx;
+  display: flex;
+  font-size: 40rpx;
+  font-weight: 600;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  color: #ffa500;
+}
+.person-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 2rpx 0 2rpx 0;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
+}
+.person-info .person_rank {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.person-info .person_rank .ranking_num {
+  font-size: 32rpx;
+  font-weight: 650;
+}
+.person-info .person_rank .firstone {
+  width: 25%;
+}
+.person-info .person_rank1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.person-info .person_rank1 .ranking_num {
+  font-size: 32rpx;
+  font-weight: 650;
+}
+.person-info .person_rank1 .firstone {
+  width: 25%;
+}
+.person-info .person_img_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.person-info .person_img_wrap image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  justify-content: center;
+}
+.person-info .person_name {
+  font-size: 32rpx;
+  flex: 1;
+}
+.person-info .person_points {
+  color: var(--themeColor);
+  font-size: 32rpx;
+  font-weight: 650;
+  flex: 1;
+}
+.sharebtn {
+  position: fixed;
+  width: 250rpx;
+  height: 90rpx;
+  font-size: 32rpx;
+  font-weight: 550;
+  background: white;
+  margin-top: 800rpx;
+  margin-left: 250rpx;
+}
+.sharebtn .shareimage {
+  margin-top: 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  border: none;
+}

@@ -1,0 +1,26 @@
+<view class="user">
+<image class="user_img" src="{{pub_img?pub_img:'https://z3.ax1x.com/2021/03/21/65cput.png'}}" mode="widthFix"></image>
+<view class="user_name">{{pub_people}}</view>
+<button class="accept" bindtap="showRule" style="width:150rpx;height:70rpx" disabled="{{disabled}}">领取任务</button>
+<!-- <navigator class="talk" url="/pages/message/index">与ta聊聊</navigator> -->
+</view>
+
+<view class="notice">
+    <view class="user-point">
+        <image src="https://s3.ax1x.com/2021/02/18/yWAnyD.png" mode="widthFix" class="point-icon"/>
+        <view class="point-num">{{score}}</view>
+    </view>
+    <view class="notice_detail">
+    <text class="info">地址：{{ad_name}}({{address}})
+    
+    {{content}}</text>
+    <view class="info_img_item" >
+        <image src="{{image1}}" class="each_img" mode="widthFix" wx:if="{{image1!=null}}"/>
+        <image src="{{image2}}" class="each_img" mode="widthFix" wx:if="{{image2!=null}}"/>
+        <image src="{{image3}}" class="each_img" mode="widthFix" wx:if="{{image3!=null}}"/></view>
+    </view>
+</view>
+
+<view class="tool">
+<view class="look">浏览：{{count}}</view>
+</view>

@@ -1,0 +1,17 @@
+<view class="message">
+    <view class="system">
+        <view class="img_wrap">
+            <image src="/icons/notice.png" mode="widthFix">
+            </image>
+        </view>
+        <view class="right">
+            <view class="name">系统通知</view>
+        </view>
+    </view>
+    <view class="messagebox"
+    wx:for="{{messageList}}"
+    wx:key="*this">
+        <view class="message_text">{{item.message_content}}
+        </view>
+    </view>
+</view>

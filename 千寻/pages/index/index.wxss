@@ -1,0 +1,103 @@
+/* view{ */
+/* 使用主题颜色 */
+/* color:var(--themeColor); */
+/* } */
+page {
+  background-color: white;
+}
+.search_input {
+  height: 90rpx;
+  padding: 10rpx;
+  background-color: var(--themeColor);
+  display: flex;
+}
+.search_input .search_text {
+  height: 100%;
+  width: 93%;
+  display: flex;
+  padding-left: 10rpx;
+  background-color: #ffffff;
+  border-bottom-left-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+}
+.search_input .icon_holder {
+  width: 7%;
+  background-color: white;
+  height: 100%;
+  border-bottom-right-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+.search_input .icon_holder .search_icon {
+  margin-top: 10rpx;
+  width: 95%;
+}
+.slide-image {
+  height: 100%;
+  width: 100%;
+}
+.chart {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+}
+.chart .iconOne {
+  background-color: #4e97fd;
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  border-radius: 15rpx;
+  color: white;
+  font-weight: 600;
+  align-items: center;
+}
+.chart .iconOne .area {
+  width: 100rpx;
+}
+.chart .iconOne .firtext {
+  margin-left: 200rpx;
+  font-size: 28rpx;
+}
+.mini_tab {
+  background-color: white;
+}
+.notice_tab {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+  justify-content: space-between;
+  background-color: #e4e4e4;
+}
+.notice_tab .goods_item {
+  width: 49%;
+  margin: 0.5%;
+  background-color: white;
+  border-radius: 15rpx;
+}
+.notice_tab .goods_item .goods_img_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15rpx;
+}
+.notice_tab .goods_item .goods_img_wrap image {
+  width: 367rpx;
+  height: 367rpx;
+}
+.notice_tab .goods_item .goods_info_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.notice_tab .goods_item .goods_info_wrap .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.notice_tab .goods_item .goods_info_wrap .goods_price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+  font-weight: 650;
+}

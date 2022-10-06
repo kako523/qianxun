@@ -1,0 +1,37 @@
+<view class="user-info">
+    <image class="user-img" src="{{img?img:'https://z3.ax1x.com/2021/03/21/65cput.png'}}"/>
+    <view class="user-info-1">
+    <view class="user-name">{{name}}</view>
+    <view class="user-point">
+        <image src="https://s3.ax1x.com/2021/02/18/yWAnyD.png" mode="widthFix" class="point-icon"/>
+        <view class="point-num">{{score}}</view>
+    </view>
+    </view>
+</view>
+
+<view class="user-info-2">
+<navigator class="user-mission" url="/pages/my_mission/index">
+    <image class="misson-icon" src="/icons/mission.png" mode="widthFix" />
+    <view class="misson-text">我的任务</view>
+</navigator>
+<navigator class="user-ranking" url="/pages/ranking/index">
+    <image class="ranking-icon" src="/icons/ranking.png" mode="widthFix"/>
+    <view class="ranking-text">积分排行</view>
+</navigator>
+<navigator class="user-publish" url="/pages/published/index">
+    <image class="publish-icon" src="/icons/publish.png" mode="widthFix"/>
+    <view class="publish-text">我发布的</view>
+</navigator>
+</view>
+
+<view class="user-more">
+    <view class="user-more-title">更多服务</view>
+    <button class="contact" open-type="contact">
+        <image class="kefu" src="/icons/kefu.png" mode="widthFix" />
+        <view class="contact-text">联系客服</view>
+    </button>
+    <navigator class="setting" url="/pages/setting/index">
+        <image class="setting-icon" src="/icons/setting.png" mode="widthFix" />
+        <view class="setting-text">设置</view>
+    </navigator>
+</view>

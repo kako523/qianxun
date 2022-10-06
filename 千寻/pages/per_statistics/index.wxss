@@ -1,0 +1,36 @@
+page {
+  background-color: white;
+}
+.chart1 {
+  margin-top: 20rpx;
+  height: 700rpx;
+  width: 750rpx;
+  border-bottom: solid #eee;
+  border-bottom-width: 5rpx;
+}
+.chart1 .mychart-dom-multi-bar {
+  width: 100%;
+  height: 100%;
+}
+.chart2 {
+  margin-top: 20rpx;
+  height: 700rpx;
+  width: 750rpx;
+  border-bottom: solid #eee;
+  border-bottom-width: 5rpx;
+}
+.chart2 .mychart-dom-multi-scatter {
+  width: 100%;
+  height: 100%;
+}
+.chart3 {
+  margin-top: 20rpx;
+  height: 700rpx;
+  width: 750rpx;
+  border-bottom: solid #eee;
+  border-bottom-width: 5rpx;
+}
+.chart3 .mychart-dom-multi-pie {
+  width: 100%;
+  height: 100%;
+}
