@@ -1,4 +1,6 @@
-# qianxun
-Lost and Found wechat mini program
----
-The project is based on the WeChat platform WeChat small programs, we implemented a highly targeted, and information integration is complete, the application fully functional and can at any time using the platform for the lost and found, all the "missing notice will be deemed to be" function to receive the task of this project from the simple "lost and found" into "treasure hunt game with fun, The overall concept has been innovative. The main functions include the release of lost/found object notices, points task system, chat interaction, map visualization display and other functions. The front-end uses JavaScript+WXSS+WXML, the back-end uses Springboot+Mybatis+Mysql, and the Tencent cloud server is used to build the back-end.
+# 千寻-失物招领小程序
+对大多数人来说，失物招领在当代并不是一个陌生的概念。在学校、公司或者医院等人类进行特定活动的场所，我们都能看到失物招领处的身影。近年来，随着智能手机的发展，应用程序的概念逐渐火热，到今天，应用程序已经成为我们常用的工具之一。但是，人们对于失物招领的认知仍然停留在网站，甚至是一个线下的专门地点称谓。同时，尽管存在流程及应用比较全面的失物招领网站，但极少数人愿意去网站上发布失物或者招领启事，大部分人选择发帖的形式来寻找丢失的物品或者失物的主人。
+为了使人们能够更加便利集中地获取失物招领信息，并且在寻找失物过程中增加更多正面积极情绪，调节日常生活，我们设计并研发出了“千寻——失物招领平台”微信小程序。
+### 使用到的框架
+- 前端：WXML+WXSS+JavaScript
+- 后端：Springboot+Mybatis+Mysql
