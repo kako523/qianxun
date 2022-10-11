@@ -5,6 +5,8 @@
 - 前端：WXML+WXSS+JavaScript
 - 后端：Springboot+Mybatis+Mysql
 ### 贡献者
-
+- 队长&前端编写：mm23mm
+- 后端&服务器：kako
+- 
 ### 作者
 kako
