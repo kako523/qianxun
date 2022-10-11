@@ -6,7 +6,6 @@
 - 后端：Springboot+Mybatis+Mysql
 ### 贡献者
 - 队长&前端编写：mm23mm
-- 后端&服务器：kako
-- 
+- 后端&服务器：kako523、zhou0011
 ### 作者
-kako
+kako523
